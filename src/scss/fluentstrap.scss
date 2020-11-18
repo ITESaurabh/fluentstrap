@@ -43,3 +43,7 @@
  @import "utilities";
  @import "print";
  
+ .btn:focus,.btn:active {
+    outline: none !important;
+    box-shadow: none !important;
+ }
