@@ -3,10 +3,31 @@
 //
 // Base styles
 //
+root-335 {
+    outline: transparent none medium;
+    position: relative;
+    font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    box-sizing: border-box;
+    border: 1px solid rgb(0, 120, 212);
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    padding: 0px 16px;
+    border-radius: 2px;
+    min-width: 80px;
+    height: 32px;
+    background-color: rgb(0, 120, 212);
+    color: rgb(255, 255, 255);
+    user-select: none;
+}
 
 .btn {
+  min-width: 80px;
   display: inline-block;
-  font-family: $btn-font-family;
+  font-family: "Segoe UI", "Segoe UI Web (West European)", "Segoe UI", -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", sans-serif;
   font-weight: $btn-font-weight;
   color: $body-color;
   text-align: center;
@@ -17,7 +38,6 @@
   background-color: transparent;
   border: $btn-border-width solid transparent;
   @include button-size($btn-padding-y, $btn-padding-x, $btn-font-size, $btn-line-height, $btn-border-radius);
-  @include transition($btn-transition);
 
   @include hover() {
     color: $body-color;
@@ -139,4 +159,37 @@ input[type="button"] {
   &.btn-block {
     width: 100%;
   }
+}
+
+// FUI Overrides
+.btn-outline-light {
+  color: $fab-dark;
+  border-color: #8a8886;
+
+  @include hover() {
+    background-color: #f3f2f1;
+    border-color: #8a8886;
+    text-decoration: none;
+  }
+
+  &:focus,
+  &.focus {
+    color: $fab-dark;
+    border-color: #8a8886;
+    text-decoration: none;
+  }
+
+  &:active,
+  &.active {
+    color: $fab-dark;
+    border-color: #8a8886;
+    text-decoration: none;
+  }
+
+}
+
+.btn-outline-light:active {
+  color: #212529;
+  background-color: #edebe9;
+  border-color: #8a8886 !important;
 }
